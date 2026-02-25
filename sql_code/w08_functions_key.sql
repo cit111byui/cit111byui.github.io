@@ -1,4 +1,5 @@
- SELECT * FROM magazine;
+USE magazine;
+SELECT * FROM magazine;
 
 -- 1.
 -- List the magazine name and then
@@ -21,6 +22,7 @@ SELECT subscriptionStartDate, subscriptionLength, DATE_FORMAT(DATE_ADD(subscript
 FROM subscription;
 
 -- 4.
+USE bike;
 -- We need a list of all the products without the year at the end of the product_name string
 -- Notice, some have two years listed, make sure you take those off as well.
 -- Limit your results to the first 14 
@@ -30,12 +32,14 @@ FROM subscription;
 
 SELECT LEFT(product_name, LOCATE(' -', product_name)) AS 'Product Name without Year'
 FROM product
+ORDER BY product_id
 LIMIT 14;
 
 -- or
 
 SELECT SUBSTRING(product_name, 1, LOCATE(' -', product_name, 1 ))
 FROM product
+ORDER BY product_id
 LIMIT 14;
 
 -- 5.
