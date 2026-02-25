@@ -75,7 +75,7 @@ FROM product JOIN cust_order_item
 WHERE order_date BETWEEN '2016-03-01' AND '2016-03-31';
 
 -- More joins (table aliases, more practice with outer joins)
-
+USE magazine;
 -- show table aliases, AS is an optional keyword with column aliases
 -- and with table aliases
 SELECT subscriberLastName AS lastname, subscriberFirstName, subscriptionStartDate
